@@ -1,5 +1,4 @@
-import { NextRequest } from "next/server";
-import type { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req: NextRequest, res: NextResponse) {
     const hostname = req.headers.get('host')!
