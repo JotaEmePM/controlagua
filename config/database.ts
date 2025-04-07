@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 
 const connectDB = async (): Promise<IConnectionResult<typeof mongoose>> => {
     try {
-        await mongoose.connect('');
+        let mongoUrl = process.env.MONGOURL! as string
+        await mongoose.connect(mongoUrl);
 
         return {
             success: true,
