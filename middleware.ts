@@ -6,9 +6,10 @@ export function middleware(req: NextRequest, res: NextResponse) {
 
     if(subdomain || subdomain === '') {
         req.headers.set('x-subdomain', 'test')
-        res.headers.set('x-subdomain', 'test')
+        // res.headers.set('x-subdomain', 'test')
     }
         
     req.headers.set('x-subdomain', subdomain)
-    res.headers.set('x-subdomain', subdomain)
+    // res.headers.set('x-subdomain', subdomain)
+    console.log(`'x-subdomain': ${subdomain}`)
 }
